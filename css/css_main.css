@@ -1,0 +1,117 @@
+
+
+body{
+    background-image: url("../imagens/r_NuRr.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#mainbody{
+    background-image: url("../imagens/muro2.png");
+    padding: 30px;
+    position: relative;
+    width: 1000px;
+    text-align: center;
+    text-shadow: 3px 1px 2px gray;
+    box-shadow: 0px 0px 30px 15px;
+    outline-style:groove;
+    outline-color: rgb(230, 230, 230);
+    outline-width: 5px;
+    outline-offset: -10px;
+    scale: 90%;
+
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 1px red;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#btn1{
+    background-image: linear-gradient(to right, red, rgb(170, 0, 0));
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#btn2{
+    background-image: linear-gradient(to right, rgb(170, 0, 0), rgb(100, 0, 0));
+    width: 200px;
+    height: 100px;
+    text-shadow: white;
+    color: azure;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#btn3{
+    background-image: linear-gradient(to right, rgb(100, 0, 0), rgb(39, 0, 0));
+    width: 200px;
+    height: 100px;
+    color: rgb(194, 194, 194);
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gamedevbutton{
+    display: flex;
+    width: 70px;
+    height: 70px;
+}
+
+
+#stuff{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: square;      
+    padding: 30px;            
+    margin: 20px; 
+    gap: 20px;
+    outline-style:groove;
+    outline-color: rgb(230, 230, 230);
+    outline-width: 3px;
+}
+
+li{
+    text-shadow: 3px 1px 2px gray;
+}
+a{
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+
+#gato {
+    position: absolute;
+    bottom: 5%;
+    right: 80%;
+    height: 100px;
+}
+
+.cube{
+    position: absolute;
+    bottom: 96%;
+    right: -3%;
+    height: 200px;
+}
+.esfera{
+    position: absolute;
+    bottom: 30%;
+    left: -10%;
+    height: 150px;
+}

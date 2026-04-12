@@ -1,0 +1,208 @@
+
+
+body{
+    background-image: url("../imagens/gamedevback.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#mainbody{
+    background-image: url("../imagens/marble.png");
+    padding: 30px;
+    position: relative;
+    width: 1000px;
+    text-align: center;
+    text-shadow: 3px 1px 2px gray;
+    box-shadow: 0px 0px 30px 15px;
+    outline-style:groove;
+    outline-color: rgb(230, 230, 230);
+    outline-width: 5px;
+    outline-offset: -10px;
+    scale: 100%;
+
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 1px red;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 140%;
+}
+
+#btn1{
+    background-image: linear-gradient(to right, red, rgb(170, 0, 0));
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#btn2{
+    background-image: linear-gradient(to right, rgb(170, 0, 0), rgb(100, 0, 0));
+    width: 200px;
+    height: 100px;
+    text-shadow: white;
+    color: azure;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#btn3{
+    background-image: linear-gradient(to right, rgb(100, 0, 0), rgb(39, 0, 0));
+    width: 200px;
+    height: 100px;
+    color: rgb(194, 194, 194);
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gamedevbutton{
+    display: flex;
+    width: 70px;
+    height: 70px;
+}
+
+
+#stuff{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: square;      
+    padding: 30px;            
+    margin: 20px; 
+    gap: 20px;
+    outline-style:groove;
+    outline-color: rgb(230, 230, 230);
+    outline-width: 3px;
+}
+
+li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-shadow: 2px 1px 2px gray;
+}
+a{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+
+#gato {
+    position: absolute;
+    bottom: 5%;
+    right: 80%;
+    height: 100px;
+}
+
+.cube{
+    position: absolute;
+    bottom: 96%;
+    right: -3%;
+    height: 200px;
+}
+.esfera{
+    position: absolute;
+    bottom: 30%;
+    left: -10%;
+    height: 150px;
+}
+
+#sidebar{
+    position: relative;
+    background-image: url("/imagens/space.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    margin: 10px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+}
+
+#globo{
+    display: flex;
+    position: absolute;
+    scale: 150%;
+    bottom: 20%;
+    right: 10%;
+}
+
+#sidebar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px; /* controla compactação geral */
+    padding: 0;
+    margin: 0;
+}
+
+.gameicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;       /* espaço entre ícone e texto */
+}
+
+#sidebar img{
+    height: 40px;   /* ↓ ícones menores */
+}
+
+#conceptart{
+    box-shadow: 0px 0px 40px 3px;
+}
+
+@keyframes rainbow {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+#sidebar::before{
+    content: "";
+    position: absolute;
+    inset: -6px; /* espessura da borda */
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        magenta,
+        red
+    );
+
+    background-size: 400% 400%;
+    animation: rainbow 6s linear infinite;
+
+    /* RECORTE DA BORDA */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+
+    padding: 6px; /* mesma espessura */
+    border-radius: 6px;
+}
