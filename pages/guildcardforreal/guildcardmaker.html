@@ -9,12 +9,17 @@
 </head>
 <body>
   <div class="form">
-  <a href="/index.html">Return to main page...</a><br>
+  <a href="/index.html" data-i18n="returnToMain">Return to main page...</a><br>
   <h1>Nimbos' Guild Card Maker</h1><br>
-  Profile Picture<input type="file" id="input-profile" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
-  Hunter Name<input type="text" id="input-name" placeholder="Josuke Joestar" maxlength="27">
-  Title<input type="text" id="tit" placeholder="Great Researcher" maxlength="20">
-  Favorite Game
+  <select id="lang" onchange="setLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="pt" selected>Português</option>
+    <option value="jp" selected>日本語</option>
+  </select><br>
+  <span data-i18n="profilePicture">Profile Picture</span><input type="file" id="input-profile" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
+  <span data-i18n="hunterName">Hunter Name</span><input type="text" id="input-name" placeholder="Josuke Joestar" maxlength="27">
+  <span data-i18n="title">Title</span><input type="text" id="tit" placeholder="Great Researcher" maxlength="20">
+  <span data-i18n="favoriteGame">Favorite Game</span>
                 <select id="favGame" name="disc">
                     <option value="mh1">Monster Hunter 1</option>
                     <option value="mh1g">Monster Hunter 1G</option>
@@ -40,33 +45,37 @@
                     <option value="mhst3">Monster Hunter Stories 3</option>
                     <option value="mhon">Monster Hunter Online</option>
             </select>
-  Description<textarea id="input-desc" placeholder="I like chicken nuggets" rows="10" maxlength="500"></textarea>
-  Favorite Monster<input type="text" id="favMon" placeholder="Rathalos">
-  Monster Icon<input type="file" id="input-icon" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
-  Background Image<input type="file" id="input-bg" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
-  Screenshots (Max of 3)<input type="file" id="input-gallery" multiple accept="image/png, image/jpeg, .png, .jpg, .jpeg">
-    Favorite Weapons
+  <span data-i18n="description">Description</span><textarea id="input-desc" 
+  placeholder="I like chicken nuggets  
+  
+
+my socials are....." rows="10" maxlength="500"></textarea>
+  <span data-i18n="favoriteMonster">Favorite Monster</span><input type="text" id="favMon" placeholder="Rathalos">
+  <span data-i18n="monsterIcon">Monster Icon</span><input type="file" id="input-icon" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
+  <span data-i18n="backgroundImage">Background Image</span><input type="file" id="input-bg" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
+  <span data-i18n="screenshots">Screenshots (Max of 3)</span><input type="file" id="input-gallery" multiple accept="image/png, image/jpeg, .png, .jpg, .jpeg">
+    <span data-i18n="favoriteWeapons">Favorite Weapons</span>
     <div id="weapon-list">
-    <label><input type="checkbox" value="GS"><span>Greatsword</span></label>
-    <label><input type="checkbox" value="LS"><span>Longsword</span></label>
-    <label><input type="checkbox" value="SnS"><span>Sword and Shield</span></label>
-    <label><input type="checkbox" value="DB"><span>Dual Blades</span></label>
-    <label><input type="checkbox" value="HAM"><span>Hammer</span></label>
-    <label><input type="checkbox" value="HH"><span>Hunting Horn</span></label>
-    <label><input type="checkbox" value="LAN"><span>Lance</span></label>
-    <label><input type="checkbox" value="GL"><span>Gunlance</span></label>
-    <label><input type="checkbox" value="SA"><span>Switch Axe</span></label>
-    <label><input type="checkbox" value="CB"><span>Charge Blade</span></label>
-    <label><input type="checkbox" value="IG"><span>Insect Glave</span></label>
-    <label><input type="checkbox" value="BOW"><span>Bow</span></label>
-    <label><input type="checkbox" value="LBG"><span>Light Bowgun</span></label>
-    <label><input type="checkbox" value="HBG"><span>Heavy Bowgun</span></label>
-    <label><input type="checkbox" value="TF"><span>Tonfa</span></label>
-    <label><input type="checkbox" value="MS"><span>Magnet Spike</span></label>
+    <label><input type="checkbox" value="GS"><span data-i18n="greatsword">Greatsword</span></label>
+    <label><input type="checkbox" value="LS"><span data-i18n="longsword">Longsword</span></label>
+    <label><input type="checkbox" value="SnS"><span data-i18n="swordAndShield">Sword and Shield</span></label>
+    <label><input type="checkbox" value="DB"><span data-i18n="dualBlades">Dual Blades</span></label>
+    <label><input type="checkbox" value="HAM"><span data-i18n="hammer">Hammer</span></label>
+    <label><input type="checkbox" value="HH"><span data-i18n="huntingHorn">Hunting Horn</span></label>
+    <label><input type="checkbox" value="LAN"><span data-i18n="lance">Lance</span></label>
+    <label><input type="checkbox" value="GL"><span data-i18n="gunlance">Gunlance</span></label>
+    <label><input type="checkbox" value="SA"><span data-i18n="switchAxe">Switch Axe</span></label>
+    <label><input type="checkbox" value="CB"><span data-i18n="chargeBlade">Charge Blade</span></label>
+    <label><input type="checkbox" value="IG"><span data-i18n="insectGlave">Insect Glave</span></label>
+    <label><input type="checkbox" value="BOW"><span data-i18n="bow">Bow</span></label>
+    <label><input type="checkbox" value="LBG"><span data-i18n="lightBowgun">Light Bowgun</span></label>
+    <label><input type="checkbox" value="HBG"><span data-i18n="heavyBowgun">Heavy Bowgun</span></label>
+    <label><input type="checkbox" value="TF"><span data-i18n="tonfa">Tonfa</span></label>
+    <label><input type="checkbox" value="MS"><span data-i18n="magnetSpike">Magnet Spike</span></label>
   </div>
 
-  <button onclick="generateCard()">Create Guild Card</button>
-  <button onclick="downloadCard()">Download Guild Card</button>
+  <button onclick="generateCard()" data-i18n="createGuildCard">Create Guild Card</button>
+  <button onclick="downloadCard()" data-i18n="downloadGuildCard">Download Guild Card</button>
 </div>
 
 <div id="card">
@@ -76,16 +85,16 @@
   <div id="name"></div>
   <div id="title"></div>
   <div id="favmons">
-    Favorite Monster:<div id="famon"></div>
+    <span data-i18n="favoriteMonsterLabel">Favorite Monster:</span><div id="famon"></div>
     <img id="icon" src="./imagens/questionmark.png">
   </div>
   <div id="Fg-cont">
-    <div id="favGam-te">Favorite Game:</div>
     <div id="favGam"></div>
-
+    
   </div>
+  <img src="./imagens/star.png" id="star1">
   <div id="desc-bg">
-    About me:<div id="desc"></div>
+    <span data-i18n="aboutMe">About me:</span><div id="desc"></div>
 
   </div>
   <div class="gallery">
