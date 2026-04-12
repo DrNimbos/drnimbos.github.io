@@ -11,6 +11,7 @@
   <div class="form">
   <a href="/index.html">Return to main page...</a><br>
   <h1>Nimbos' Guild Card Maker</h1><br>
+  Profile Picture<input type="file" id="input-profile" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
   Hunter Name<input type="text" id="input-name" placeholder="Josuke Joestar" maxlength="27">
   Title<input type="text" id="tit" placeholder="Great Researcher" maxlength="20">
   Favorite Game
@@ -41,10 +42,9 @@
             </select>
   Description<textarea id="input-desc" placeholder="I like chicken nuggets" rows="10" maxlength="500"></textarea>
   Favorite Monster<input type="text" id="favMon" placeholder="Rathalos">
-  Monster Icon<input type="file" id="input-icon">
-  Profile Picture<input type="file" id="input-profile">
-  Background Image<input type="file" id="input-bg">
-  Screenshots (Max of 3)<input type="file" id="input-gallery" multiple>
+  Monster Icon<input type="file" id="input-icon" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
+  Background Image<input type="file" id="input-bg" accept="image/png, image/jpeg, .png, .jpg, .jpeg">
+  Screenshots (Max of 3)<input type="file" id="input-gallery" multiple accept="image/png, image/jpeg, .png, .jpg, .jpeg">
     Favorite Weapons
     <div id="weapon-list">
     <label><input type="checkbox" value="GS"><span>Greatsword</span></label>
@@ -71,13 +71,13 @@
 
 <div id="card">
   <img src="imagens/backgroundgradiante.png" id="bg-grad">
-  <img id="bg">
-  <img id="profile">
+  <img id="bg" src="./imagens/wood.png">
+  <img id="profile" src="./imagens/questionmark.png">
   <div id="name"></div>
   <div id="title"></div>
   <div id="favmons">
     Favorite Monster:<div id="famon"></div>
-    <img id="icon">
+    <img id="icon" src="./imagens/questionmark.png">
   </div>
   <div id="Fg-cont">
     <div id="favGam-te">Favorite Game:</div>
@@ -89,9 +89,9 @@
 
   </div>
   <div class="gallery">
-    <img id="g0">
-    <img id="g1">
-    <img id="g2">
+    <img id="g0" src="./imagens/questionmark.png" >
+    <img id="g1" src="./imagens/questionmark.png" >
+    <img id="g2" src="./imagens/questionmark.png" >
   </div>
   <div id="weapon-cont">
     <div class="weapons" id="weapons"></div>
