@@ -59,7 +59,7 @@ body {
       top: 20px;
       left: 160px;
       width: 500px;
-      font-size: 28px;
+      font-size: 27px;
       background-color: #1a1a1a93;
       border-radius: 15px;
       padding: 5px;
@@ -80,7 +80,7 @@ body {
         position: absolute;
         top: 115px;
         left: 160px;
-        background-image: url("/imagens/oldpaper.png");
+        background-image: url("/pages/guildcardforreal/imagens/oldpaper.png");
         height: 220px;
         width: 600px;
         outline-style:solid;
@@ -119,7 +119,7 @@ body {
         bottom: -1px;
         left: 400px;
         transform: scale(0.8);
-        background-image: url("/imagens/backgroundweapon.png");
+        background-image: url("/pages/guildcardforreal/imagens/backgroundweapon.png");
         outline-style: solid;
         outline-color: #d39b0093;
         outline-width: 2px;
@@ -258,7 +258,7 @@ body {
   height: 174px;
   width: 120px;
   text-align: center;
-  background-image: url("/imagens/backgroundfavmon.png");
+  background-image: url("/pages/guildcardforreal/imagens/backgroundfavmon.png");
   outline-style: solid;
   outline-color: #d3000093;
   outline-width: 2px;
@@ -274,4 +274,27 @@ body {
   overflow-wrap: break-word;
   white-space: normal;
   font-weight: bold;
+}
+
+/* Ajustes mínimos para mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  #card {
+    left: 0;
+    top: 0;
+    transform: scale(1.0);
+    margin: 0 auto;
+  }
+}
+
+a{
+  color: red;
 }
