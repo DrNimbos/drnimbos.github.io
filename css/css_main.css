@@ -15,7 +15,8 @@ body{
     background-image: url("../imagens/muro2.png");
     padding: 30px;
     position: relative;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     text-align: center;
     text-shadow: 3px 1px 2px gray;
     box-shadow: 0px 0px 30px 15px;
@@ -24,7 +25,7 @@ body{
     outline-width: 5px;
     outline-offset: -10px;
     scale: 90%;
-
+    z-index: 0;
 }
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -33,7 +34,7 @@ h1{
 
 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+
 }
 
 #btn1{
@@ -101,6 +102,7 @@ a{
     bottom: 5%;
     right: 80%;
     height: 100px;
+    z-index: 1
 }
 
 .cube{
@@ -114,5 +116,39 @@ a{
     bottom: 30%;
     left: -10%;
     height: 150px;
+
+
 }
 
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    #mainbody {
+        padding: 15px;
+    }
+
+    /* sidebar fica mais simples */
+    #sidebar {
+        flex-direction: column;
+        align-items: center;
+    }}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cube, .esfera{
+    z-index: 0;
+}
+
+#mainbody p, 
+#mainbody h1, 
+#mainbody button,
+#mainbody a {
+    position: relative;
+    z-index: 1;
+}
