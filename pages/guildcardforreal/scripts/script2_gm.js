@@ -192,7 +192,7 @@ function downloadCard() {
   clone.style.left = "0";
   clone.style.transform = "none";
   clone.style.scale = "1";
-  clone.style.width = "800px";
+  clone.style.width = "900px";
   clone.style.height = "450px";
 
   document.body.appendChild(clone);

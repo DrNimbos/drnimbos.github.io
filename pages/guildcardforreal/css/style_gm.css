@@ -21,7 +21,7 @@ body {
       font-family:Georgia, 'Times New Roman', Times, serif;
       left: 250px;
       top: 200px;
-      width: 800px;
+      width: 900px;
       height: 450px;
       position: relative;
       background: #333;
@@ -50,7 +50,7 @@ body {
       left: 20px;
       width: 120px;
       height: 120px;
-      object-fit: cover;
+      object-fit: fill;
       border: 2px dotted white;
     }
 
@@ -89,8 +89,9 @@ body {
         padding: 10px;        /* espaço interno */
         box-sizing: border-box;
         color: #1a1a1a;
-        text-shadow: #444 1px 1px 2px;
+        text-shadow: #e9e9e9 1px 1px 2px;
         overflow: hidden;     /* corta o excesso */
+        opacity: 70%;
     }
     #desc {
          width: 100%;
@@ -117,7 +118,7 @@ body {
     #weapon-cont{
         position: absolute;
         bottom: -1px;
-        left: 400px;
+        left: 530px;
         transform: scale(0.8);
         background-image: url("/pages/guildcardforreal/imagens/backgroundweapon.png");
         outline-style: solid;
@@ -134,7 +135,7 @@ body {
     .gallery img {
       width: 120px;
       height: 80px;
-      object-fit: cover;
+      object-fit: fill;
       margin: 2px;
     }
 
@@ -159,11 +160,13 @@ body {
       padding: 2px;
       box-sizing: border-box;
       margin: 0;
+      opacity: 100%;
     }
 
     .weapons b {
       width: 100%;
       font-size: 10px;
+      opacity: 100%;
     }
 
     .weapon-icon {
@@ -174,6 +177,7 @@ body {
       border-radius: 2px;
       background: rgba(0,0,0,0.35);
       padding: 3px;
+      opacity: 100%;
     }
 
     .gicon {
@@ -184,6 +188,7 @@ body {
       border-radius: 6px;
       background: rgba(255, 255, 255, 0.39);
       padding: 3px;
+      
     }
 
     #favGam {
