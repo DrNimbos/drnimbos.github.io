@@ -187,7 +187,7 @@ function downloadCard() {
   html2canvas(card, { scale: 2 }).then(canvas => {
     card.style.transform = originalTransform; // Restore scale
     const link = document.createElement("a");
-    link.download = "hunter-card.png";
+    link.download = "guildcard.png";
     link.href = canvas.toDataURL("image/png", 1.0);
     link.click();
   });
