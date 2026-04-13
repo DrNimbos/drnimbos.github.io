@@ -193,4 +193,4 @@ function downloadCard() {
   });
 }
 
-setLanguage('pt');
+setLanguage('en');
