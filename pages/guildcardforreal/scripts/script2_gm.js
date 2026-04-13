@@ -181,15 +181,33 @@ function generateCard() {
 }
 
 function downloadCard() {
-  const card = document.getElementById("card");
-  const originalTransform = card.style.transform;
-  card.style.transform = 'none'; // Remove scale for capture
-  html2canvas(card, { scale: 2 }).then(canvas => {
-    card.style.transform = originalTransform; // Restore scale
+  const original = document.getElementById("card");
+
+  // Clona o card
+  const clone = original.cloneNode(true);
+
+  // Estilo isolado para captura
+  clone.style.position = "fixed";
+  clone.style.top = "-9999px";
+  clone.style.left = "0";
+  clone.style.transform = "none";
+  clone.style.scale = "1";
+  clone.style.width = "800px";
+  clone.style.height = "450px";
+
+  document.body.appendChild(clone);
+
+  html2canvas(clone, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: null
+  }).then(canvas => {
     const link = document.createElement("a");
     link.download = "guildcard.png";
-    link.href = canvas.toDataURL("image/png", 1.0);
+    link.href = canvas.toDataURL("image/png");
     link.click();
+
+    document.body.removeChild(clone);
   });
 }
 
