@@ -108,6 +108,7 @@ body {
         line-height: 1.4em;
         max-height: calc(1.4em * 10);
         color: #1a1a1a;
+        opacity: 100%;
 }
 
     textarea{
